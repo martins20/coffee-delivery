@@ -1,3 +1,3 @@
-import { Theme } from "./implementations/theme";
+import { ThemeImplementation } from "./implementations/theme";
 
-export const themeService = new Theme();
+export const themeService = new ThemeImplementation();

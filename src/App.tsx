@@ -1,5 +1,9 @@
-import { useState } from "react";
+import { AppProvider } from "./providers/app";
 
 export const App = () => {
-  return <h1>App</h1>;
+  return (
+    <AppProvider>
+      <h1>Hello World</h1>
+    </AppProvider>
+  );
 };

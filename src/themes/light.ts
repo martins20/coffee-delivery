@@ -4,7 +4,7 @@ export const lightThemeColors: ColorsDTO = {
   dynamic: {
     background: "#FAFAFA",
     hover: "#D7D5D5",
-    buttoh: "#E6E5E5",
+    button: "#E6E5E5",
     input: "#EDEDED",
     card: "#F3F2F2",
     title: "#272221",

@@ -3,7 +3,7 @@ import { themeChoices } from "../../../themes";
 import { ColorsDTO } from "../contract/colors";
 
 export class ThemeImplementation implements ThemeContract {
-  async getThemeColors(choice: ThemeChoice): Promise<ColorsDTO> {
+  getThemeColors(choice: ThemeChoice): ColorsDTO {
     const isChoiceOneOfThemeChoices = Object.keys(themeChoices).some(
       (themeChoice) => choice === themeChoice
     );

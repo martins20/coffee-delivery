@@ -8,16 +8,16 @@ describe("Theme Service", () => {
     sut = new SUT();
   });
 
-  it("Should load colors from light theme", async () => {
-    const lightThemeColors = await sut.getThemeColors("light");
+  it("Should load colors from light theme", () => {
+    const lightThemeColors = sut.getThemeColors("light");
 
     expect(lightThemeColors).toEqual(
       expect.objectContaining(themeChoices.light)
     );
   });
 
-  it("Should not be able to  get theme colors from non existent theme choice", async () => {
-    expect(sut.getThemeColors("unknown" as any)).rejects.toThrowError(
+  it("Should not be able to  get theme colors from non existent theme choice", () => {
+    expect(() => sut.getThemeColors("unknown" as any)).toThrow(
       "Cannot load theme colors from a non existent theme"
     );
   });

@@ -8,6 +8,7 @@ export interface ColorsDTO {
     text: string;
     subtitle: string;
     title: string;
+    card: string;
   };
   fixed: {
     purple: string;
