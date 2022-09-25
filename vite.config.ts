@@ -11,8 +11,9 @@ export default defineConfig({
     exclude: ["node_modules"],
     include: ["**/*.spec.{ts,tsx}"],
     coverage: {
-      type: "c8",
+      provider: "c8",
     },
-    mockClear: true,
+    clearMocks: true,
+    setupFiles: ["./src/test/mocks"],
   },
 });

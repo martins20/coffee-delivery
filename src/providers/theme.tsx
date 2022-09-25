@@ -6,27 +6,27 @@ import { themeService } from "../services";
 import { GlobalStyle } from "../styles/global-style";
 
 export const ThemeProvider: FC<PropsWithChildren> = ({ children }) => {
-  const [selectedTheme, setSelectedTheme] = useState(
+  const [selectedThemeColors, setSelectedThemeColors] = useState(
     themeService.getThemeColors("light")
   );
 
   const toggleThemeColor = useCallback<ThemeContextData["toggleThemeColor"]>(
     (themeChoice) => {
-      setSelectedTheme(themeService.getThemeColors(themeChoice));
+      setSelectedThemeColors(themeService.getThemeColors(themeChoice));
     },
     []
   );
 
   const themeContextData = useMemo<ThemeContextData>(
     () => ({
-      colors: selectedTheme,
+      colors: selectedThemeColors,
       toggleThemeColor,
     }),
-    [toggleThemeColor, selectedTheme]
+    [toggleThemeColor, selectedThemeColors]
   );
 
   return (
-    <StyledComponentsThemeProvider theme={selectedTheme}>
+    <StyledComponentsThemeProvider theme={selectedThemeColors}>
       <ThemeContext.Provider value={themeContextData}>
         {children}
         <GlobalStyle />
