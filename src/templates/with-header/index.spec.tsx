@@ -1,5 +1,9 @@
 import { WithHeaderTemplate as Sut } from ".";
-import { cleanup, render, RenderResult } from "@testing-library/react";
+import {
+  cleanup,
+  render,
+  RenderResult,
+} from "../../test/lib/testing-library-react";
 
 let sut: RenderResult;
 
