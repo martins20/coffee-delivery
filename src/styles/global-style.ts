@@ -15,7 +15,9 @@ export const GlobalStyle = createGlobalStyle`
 
     @media(max-width: 400px) {
       font-size: 65%;
-  }
+    }
+
+
   }
 
   body, #root {
@@ -27,8 +29,15 @@ export const GlobalStyle = createGlobalStyle`
 
     background: ${({ theme }) => theme.dynamic.background};
     color: ${({ theme }) => theme.dynamic.text};
+
+    font-family: "Roboto", sans-serif;
+
     }
 
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Baloo 2", sans-serif;
+  }
 
   h1 {
     color: ${({ theme }) => theme.dynamic.title}

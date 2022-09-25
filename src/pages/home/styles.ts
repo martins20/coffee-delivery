@@ -29,18 +29,23 @@ export const FirstHomeSection = styled.section`
 
   position: relative;
 
+
+
+
   #background-layer {
     position: absolute;
     top: 0;
-    left: -100vw;
+    left: 0;
 
-    min-width: 200vw;
-    max-width: 200vw;
+
+    min-width: 100%;
+    max-width: 100%;
 
     height: 100%;
 
-    object-fit: cover;
     z-index: 1;
+
+    opacity: .7;
   }
 
   > img {
@@ -123,6 +128,10 @@ export const FirstHomeSection = styled.section`
 export const SecondHomeSection = styled.section`
   display: flex;
   flex-direction: column;
+
+  > h2 {
+    font-size: 1rem;
+  }
 
   > ul {
     display: grid;

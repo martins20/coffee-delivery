@@ -65,7 +65,7 @@ export const HomePage = () => {
       </FirstHomeSection>
 
       <SecondHomeSection>
-        <h1>Nossos cafés</h1>
+        <h2>Nossos cafés</h2>
       </SecondHomeSection>
     </HomePageContainer>
   );
