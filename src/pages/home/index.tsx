@@ -14,6 +14,7 @@ import { useTheme } from "../../hooks/theme";
 
 import homePageCoffeImage from "../../public/assets/cofe-image-home-page.png";
 import backgroundLayer from "../../public/assets/home-background-layers.png";
+import { CoffeeCardComponent } from "../../components/coffee-card";
 
 export const HomePage = () => {
   const { colors } = useTheme();
@@ -66,6 +67,17 @@ export const HomePage = () => {
 
       <SecondHomeSection>
         <h2>Nossos cafés</h2>
+
+        <CoffeeCardComponent
+          data={{
+            id: "some-coffee-id",
+            name: "Doe's Coffee",
+            description: "A simple coffee",
+            price: 10.4,
+            types: ["With Milk", "Special"],
+          }}
+          handleAddCoffeeIntoCart={(data) => console.log(data)}
+        />
       </SecondHomeSection>
     </HomePageContainer>
   );
